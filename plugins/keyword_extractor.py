@@ -4,7 +4,7 @@ import re
 def process(text: str) -> str:
     """
     Extracts and lists the most common keywords in the text.
-    :param text: Input text to analyze.
+    :text: Input text to analyze.
     :return: List of top keywords and their frequencies.
     """
     try:

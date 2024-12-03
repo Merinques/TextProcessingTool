@@ -1,7 +1,7 @@
 def load_file(file_path: str) -> str:
     """
     Load text from a file with UTF-8 encoding.
-    :param file_path: Path to the input text file.
+    :file_path: Path to the input text file.
     :return: Text content of the file as a string.
     """
     try:
@@ -21,8 +21,8 @@ def load_file(file_path: str) -> str:
 def save_file(file_path: str, content: str) -> None:
     """
     Save text to a file with UTF-8 encoding.
-    :param file_path: Path to save the processed text file.
-    :param content: Text content to save.
+    :file_path: Path and name to save the processed text file.
+    :content: Text content to save.
     """
     try:
         with open(file_path, 'w', encoding='utf-8') as file:  # Specify UTF-8 encoding

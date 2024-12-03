@@ -1,7 +1,7 @@
 def process(text: str) -> str:
     """
     Identifies and lists all unique words in the text.
-    :param text: Input text to analyze.
+    :text: Input text to analyze.
     :return: Count and list of unique words.
     """
     try:

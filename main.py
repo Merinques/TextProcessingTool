@@ -39,7 +39,7 @@ def main():
         print(results[-1])
 
     # Save all results
-    output_path = input("\nEnter the path to save the plugin results: ").strip()
+    output_path = input("\nEnter the path and/or name to save the plugin results: ").strip()
     try:
         save_file(output_path, '\n\n'.join(results))
         print(f"Processed results saved to {output_path}.")

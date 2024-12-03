@@ -3,7 +3,7 @@ import re
 def process(text: str) -> str:
     """
     Finds and lists all palindromes in the text.
-    :param text: Input text to analyze.
+    :text: Input text to analyze.
     :return: List of palindromes.
     """
     try:

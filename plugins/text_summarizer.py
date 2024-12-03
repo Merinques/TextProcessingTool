@@ -6,7 +6,7 @@ summarizer = pipeline('summarization')
 def process(text: str) -> str:
     """
     Summarizes the input text.
-    :param text: Input text to summarize.
+    :text: Input text to summarize.
     :return: Summarized text.
     """
     try:

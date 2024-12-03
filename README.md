@@ -142,3 +142,51 @@ Enter the path to save the plugin results: C:\Users\YourUsername\Documents\proce
 
 ## **Voila!**
 You now have a functional and modular text processing tool ready to analyze and process text files efficiently.
+
+## **Development Process and Decisions**
+### **Understanding the Task**
+It was important for us to carefully read and understand the assignment to fully grasp the task at hand. From the first assignment, we had already gained valuable insights into managing similar projects. However, this assignment posed unique challenges that required further reflection, discussion, and exchanges with two other groups to clarify expectations.
+
+### **Planning**
+After understanding the requirements, we began brainstorming how we would implement the solution. The professor mentioned Python as a viable language, and due to our extensive experience with Python, we decided to use it. Initially, we debated whether to use .py files or .ipynb files. After discussions, we concluded that .py files would align better with the modularity and structure required to mimic a microkernel architecture.
+
+### **Module Creation**
+The assignment provided clear guidelines for the core module, which needed to:
+
+Read text from a file and write processed text back to a file.
+Provide a simple mechanism for users to select which plugin to apply to the text.
+Load and manage plugins dynamically, ensuring the core remained functional even if no plugins were available.
+
+We started by implementing the core module with these functionalities. To test our work, we developed a small test plugin and added test lines of code. After some minor adjustments, the module worked as intended, allowing us to proceed.
+
+### **Plugins**
+We brainstormed ideas for plugins that would be useful and aligned with the assignment's goals. While some ideas were quite creative—like a plugin that rewrites text from back to front—we aimed for a balance between usability and interesting functionality. With some help from brainstorming and suggestions from ChatGPT, we decided on the following six plugins:
+
+1. Keyword Extractor
+2. Palindrome Finder
+3. Sentiment Analysis
+4. Text Summarizer
+5. Unique Words
+6. Word Counter
+
+These plugins were chosen for their practical utility in text processing and their ability to showcase the tool’s modular capabilities. The sentiment analysis plugin was a late addition, influenced by our experience with similar tasks in other courses.
+
+### **Plugin Implementation**
+The implementation of most plugins, such as the Word Counter, was straightforward. However, the Text Summarizer and Sentiment Analysis plugins required integration with the transformers library, which initially caused significant challenges. Installing and configuring the library was particularly tricky, leading us to document the process thoroughly in this README file to help others avoid similar frustrations.
+
+At one point, we considered switching to an API like ChatGPT for these plugins but decided against it to avoid complicating the existing code. Ultimately, after much trial and error, we resolved the issues with transformers and successfully integrated the plugins.
+
+### **Testing**
+Extensive testing revealed that the tool worked as intended. However, additional testing with diverse text files uncovered a few issues:
+
+1. We could only apply one plugin at a time.
+2. The core had compatibility issues with UTF-8 encoding.
+3. The Palindrome Finder didn’t handle uppercase and lowercase letters consistently, nor did it perform well with longer texts.
+
+We addressed these issues by:
+
+- Modifying the core to allow multiple plugin selection and UTF-8 compatibility.
+- Enhancing the Palindrome Finder to normalize text for case sensitivity and better handle longer inputs.
+
+### **Conclusion**
+This project showcases how a microkernel architecture can be effectively applied to a text processing tool. The modular structure allows for easy extension and customization while ensuring the core remains stable. The process involved planning, problem-solving, and collaboration, resulting in a functional and user-friendly tool.

@@ -7,7 +7,7 @@ class Core:
 
     def list_plugins(self):
         """
-        List all available plugins.
+        List all plugins.
         """
         if not self.plugins:
             print("No plugins available.")
@@ -18,9 +18,9 @@ class Core:
 
     def apply_plugin(self, plugin_name: str, text: str) -> str:
         """
-        Apply a selected plugin to the given text.
-        :param plugin_name: Name of the plugin to apply.
-        :param text: Input text to process.
+        Apply one or multiple selected plugins to the given text.
+        :plugin_name: Name of the plugin to apply.
+        :text: Input text to process.
         :return: Processed text.
         """
         if plugin_name in self.plugins:

@@ -6,7 +6,7 @@ sentiment_analyzer = pipeline('sentiment-analysis')
 def process(text: str) -> str:
     """
     Analyzes the sentiment of the text.
-    :param text: Input text to analyze.
+    :text: Input text to analyze.
     :return: Sentiment result with label and score.
     """
     try:

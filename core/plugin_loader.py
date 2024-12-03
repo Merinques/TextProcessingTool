@@ -3,8 +3,8 @@ import importlib.util
 
 def load_plugins(plugin_dir: str):
     """
-    Dynamically load plugins from the specified directory.
-    :param plugin_dir: Path to the plugins directory.
+    Load plugins from the specified directory.
+    :plugin_dir: Path to the plugins directory.
     :return: A dictionary of plugin names and their respective process functions.
     """
     plugins = {}
